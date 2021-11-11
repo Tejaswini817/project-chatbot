@@ -1,0 +1,31 @@
+from tkinter import *
+root=Tk()
+def send():
+    send="you => "+e.get()
+    text.insert(END,"\n"+send)
+    if(e.get()==("hello")):
+        text.insert(END,"\n"+"hydra => hi,i'm siri")
+    elif(e.get()==("i need to know something")):
+        text.insert(END,"\n"+"hydra => how can i help you ")
+    elif(e.get()==("i want to book movie tickets")):
+        text.insert(END,"\n"+"hydra =>may i know in which city you want")
+    elif((e.get()==("hyderabad"))):
+        text.insert(END,"\n"+"hydra =>RRR,BHEEMLA NAYAK,PUSHPA,RAJA VIKRAMARAKA these are the movies available in hyderabad  city")
+    elif((e.get()==("i want PUSHPA movie tickets"))):  
+         text.insert(END,"\n"+"hydra =>in which class you want?")
+    elif((e.get()==("tell me what classes avaiable here"))): 
+         text.insert(END,"\n"+"hydra =>1500-1000=1st class,999-500=2nd class,499-200=3rd class available")
+    elif((e.get()==("i want 1st class okey then tell me what are the seets available in that 1st class"))): 
+         text.insert(END,"\n"+"hydra =>2 left side corner seets,4 middle seets,and normal place seets")
+    elif((e.get()==("thank you for your response"))): 
+        text.insert(END,"\n"+"hydra =>my plesure")
+         
+    else:
+            text.insert(END,"\n"+"hydra =>sorry im not reaching")
+text=Text(root)
+text.grid(row=0,column=0,columnspan=2)
+e=Entry(root,width= 50)
+send=Button(root,text="send",command=send).grid(row=1,column=1)
+e.grid(row=1,column=0)
+root.title("Movietickets_chatbot")
+root.mainloop()
